@@ -6,69 +6,78 @@
 </head>
 <body style="background-color: #f7f9fa; font-family: Arial, sans-serif; margin: 0; padding: 40px; position: relative; overflow-x: hidden; min-height: 100vh;">
 
-    <!-- Красивые фоновые цветные пятна (как на референсе) -->
+    <!-- Фоновые цветные пятна -->
     <div style="position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(100,180,240,0.15) 0%, rgba(255,255,255,0) 70%); top: -100px; right: -100px; z-index: 1; pointer-events: none; filter: blur(40px);"></div>
     <div style="position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(230,150,120,0.12) 0%, rgba(255,255,255,0) 70%); bottom: -50px; left: -100px; z-index: 1; pointer-events: none; filter: blur(30px);"></div>
-    <div style="position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(140,210,170,0.1) 0%, rgba(255,255,255,0) 70%); top: 40%; left: 30%; z-index: 1; pointer-events: none; filter: blur(50px);"></div>
 
-    <!-- Главный контейнер-планшет -->
-    <div style="position: relative; z-index: 2; background-color: #ffffff; max-width: 950px; margin: 0 auto; padding: 50px; border-radius: 24px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 15px 45px rgba(0,0,0,0.03);">
+    <!-- ВНЕШНИЙ КОРПУС ПЛАНШЕТА -->
+    <div style="position: relative; z-index: 2; max-width: 1020px; margin: 0 auto; background-color: #e2e8f0; padding: 25px 25px 25px 45px; border-radius: 40px; border: 2px solid #cbd5e1; box-shadow: 0 25px 60px rgba(0,0,0,0.1);">
         
-        <!-- Шапка сайта -->
-        <table width="100%" cellspacing="0" cellpadding="0" style="margin-bottom: 45px;">
-            <tr>
-                <td style="font-weight: bold; font-size: 20px; letter-spacing: 1px; color: #111;">AKovArt <span style="color: #999; font-weight: normal; font-size: 16px;">/ Digital Artist</span></td>
-                <td align="right" style="font-size: 13px; font-weight: bold; letter-spacing: 1px;">
-                    <span style="color: #000; border-bottom: 2px solid #54a0ff; padding-bottom: 4px; margin-right: 20px; cursor: pointer;">РАБОТЫ</span>
-                    <span style="color: #666; margin-right: 20px; cursor: pointer;">ОБО МНЕ</span>
-                    <span style="color: #666; cursor: pointer;">КОНТАКТЫ</span>
-                </td>
-            </tr>
-        </table>
+        <!-- Кнопочки на левой грани планшета -->
+        <div style="position: absolute; left: 18px; top: 50%; transform: translateY(-50%); text-align: center;">
+            <div style="width: 8px; height: 8px; background-color: #94a3b8; border-radius: 50%; margin-bottom: 12px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
+            <div style="width: 6px; height: 25px; background-color: #94a3b8; border-radius: 4px; margin-bottom: 8px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
+            <div style="width: 6px; height: 25px; background-color: #94a3b8; border-radius: 4px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
+        </div>
 
-        <!-- Основная часть из двух колонок -->
-        <table width="100%" cellspacing="0" cellpadding="0">
-            <tr>
-                <!-- Левая колонка: Большая карточка -->
-                <td width="48%" valign="top" align="center">
-                    <div style="background-color: #ffffff; padding: 14px; border: 1px solid #eef2f5; border-radius: 16px; width: 360px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
-                        <div style="width: 360px; height: 360px; background-color: #f1f3f5; border-radius: 12px; font-size: 13px; color: #8a99a8; font-weight: bold; padding-top: 160px; box-sizing: border-box; letter-spacing: 1px;">
-                            ГЛАВНАЯ РАБОТА
+        <!-- ВНУТРЕННИЙ ЭКРАН ПЛАНШЕТА (Белое окно с контентом) -->
+        <div style="background-color: #ffffff; padding: 50px; border-radius: 24px; border: 1px solid #cbd5e1; box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);">
+            
+            <!-- Шапка сайта -->
+            <table width="100%" cellspacing="0" cellpadding="0" style="margin-bottom: 45px;">
+                <tr>
+                    <td style="font-weight: bold; font-size: 20px; letter-spacing: 1px; color: #111;">AKovArt <span style="color: #999; font-weight: normal; font-size: 16px;">/ Digital Artist</span></td>
+                    <td align="right" style="font-size: 13px; font-weight: bold; letter-spacing: 1px;">
+                        <span style="color: #000; border-bottom: 2px solid #54a0ff; padding-bottom: 4px; margin-right: 20px;">РАБОТЫ</span>
+                        <span style="color: #666; margin-right: 20px;">ОБО МНЕ</span>
+                        <span style="color: #666;">КОНТАКТЫ</span>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Основная часть из двух колонок -->
+            <table width="100%" cellspacing="0" cellpadding="0">
+                <tr>
+                    <!-- Левая колонка: Большая карточка -->
+                    <td width="48%" valign="top" align="center">
+                        <div style="background-color: #ffffff; padding: 14px; border: 1px solid #eef2f5; border-radius: 16px; width: 360px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.04);">
+                            <div style="width: 360px; height: 360px; background-color: #f1f3f5; border-radius: 12px; font-size: 13px; color: #8a99a8; font-weight: bold; padding-top: 160px; box-sizing: border-box; letter-spacing: 1px;">
+                                ГЛАВНАЯ РАБОТА
+                            </div>
+                            <div style="margin-top: 18px; font-size: 11px; letter-spacing: 2px; color: #777; font-weight: bold;">ETHERBOUND</div>
                         </div>
-                        <div style="margin-top: 18px; font-size: 11px; letter-spacing: 2px; color: #777; font-weight: bold;">ETHERBOUND</div>
-                    </div>
-                </td>
-                
-                <!-- Правая колонка: Текст и миниатюры -->
-                <td width="52%" valign="middle" style="padding-left: 50px;">
-                    <h1 style="font-family: Arial, sans-serif; font-size: 38px; font-weight: bold; letter-spacing: -0.5px; line-height: 1.2; margin: 0 0 18px 0; color: #111;">
-                        AKovArt /<br><span style="color: #666; font-size: 32px; font-weight: normal;">Visual Storyteller</span>
-                    </h1>
-                    
-                    <p style="color: #555; font-size: 14px; line-height: 1.6; margin: 0 0 35px 0; max-width: 380px;">
-                        Добро пожаловать в мою творческую галерею. Здесь исследуется тонкий танец света, теней и уникальных визуальных историй.
-                    </p>
-                    
-                    <!-- Миниатюры (таблица 2х2) -->
-                    <table cellspacing="12" cellpadding="0" style="margin-bottom: 35px; margin-left: -12px;">
-                        <tr>
-                            <td><div style="width: 75px; height: 75px; background-color: #f1f3f5; border-radius: 10px; text-align: center; color: #8a99a8; font-size: 11px; font-weight: bold; padding-top: 28px; box-sizing: border-box;">Арт 1</div></td>
-                            <td><div style="width: 75px; height: 75px; background-color: #f1f3f5; border-radius: 10px; text-align: center; color: #8a99a8; font-size: 11px; font-weight: bold; padding-top: 28px; box-sizing: border-box;">Арт 2</div></td>
-                        </tr>
-                        <tr>
-                            <td><div style="width: 75px; height: 75px; background-color: #f1f3f5; border-radius: 10px; text-align: center; color: #8a99a8; font-size: 11px; font-weight: bold; padding-top: 28px; box-sizing: border-box;">Арт 3</div></td>
-                            <td><div style="width: 75px; height: 75px; background-color: #f1f3f5; border-radius: 10px; text-align: center; color: #8a99a8; font-size: 11px; font-weight: bold; padding-top: 28px; box-sizing: border-box;">Арт 4</div></td>
-                        </tr>
-                    </table>
-                    
-                    <!-- Кнопка -->
-                    <div style="display: inline-block; padding: 12px 26px; background-color: #111; color: #fff; text-decoration: none; border-radius: 20px; font-size: 11px; letter-spacing: 1px; font-weight: bold; text-transform: uppercase; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                        Подробнее
-                    </div>
-                </td>
-            </tr>
-        </table>
-        
+                    </td>
+                    <!-- Правая колонка: Текст и миниатюры -->
+                    <td width="52%" valign="middle" style="padding-left: 50px;">
+                        <h1 style="font-family: Arial, sans-serif; font-size: 38px; font-weight: bold; letter-spacing: -0.5px; line-height: 1.2; margin: 0 0 18px 0; color: #111;">
+                            AKovArt /<br><span style="color: #666; font-size: 32px; font-weight: normal;">Visual Storyteller</span>
+                        </h1>
+                        
+                        <p style="color: #555; font-size: 14px; line-height: 1.6; margin: 0 0 35px 0; max-width: 380px;">
+                            Добро пожаловать в мою творческую галерею. Здесь исследуется тонкий танец света, теней и уникальных визуальных историй.
+                        </p>
+                        
+                        <!-- Миниатюры -->
+                        <table cellspacing="12" cellpadding="0" style="margin-bottom: 35px; margin-left: -12px;">
+                            <tr>
+                                <td><div style="width: 75px; height: 75px; background-color: #f1f3f5; border-radius: 10px; text-align: center; color: #8a99a8; font-size: 11px; font-weight: bold; padding-top: 28px; box-sizing: border-box;">Арт 1</div></td>
+                                <td><div style="width: 75px; height: 75px; background-color: #f1f3f5; border-radius: 10px; text-align: center; color: #8a99a8; font-size: 11px; font-weight: bold; padding-top: 28px; box-sizing: border-box;">Арт 2</div></td>
+                            </tr>
+                            <tr>
+                                <td><div style="width: 75px; height: 75px; background-color: #f1f3f5; border-radius: 10px; text-align: center; color: #8a99a8; font-size: 11px; font-weight: bold; padding-top: 28px; box-sizing: border-box;">Арт 3</div></td>
+                                <td><div style="width: 75px; height: 75px; background-color: #f1f3f5; border-radius: 10px; text-align: center; color: #8a99a8; font-size: 11px; font-weight: bold; padding-top: 28px; box-sizing: border-box;">Арт 4</div></td>
+                            </tr>
+                        </table>
+                        
+                        <!-- Кнопка -->
+                        <div style="display: inline-block; padding: 12px 26px; background-color: #111; color: #fff; border-radius: 20px; font-size: 11px; letter-spacing: 1px; font-weight: bold; text-transform: uppercase;">
+                            Подробнее
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
     </div>
 
 </body>
